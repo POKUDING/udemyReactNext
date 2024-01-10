@@ -1,7 +1,11 @@
 import './TodoEditor.css';
-import { useState, useRef } from 'react';
+import { useState, useRef, memo, useContext } from 'react';
+import { TodoDispatchContext } from '../TodoContext';
 
-export default function TodoEditor({ onCreate}) {
+function TodoEditor() {
+
+    const { onCreate } = useContext(TodoDispatchContext);
+
     const [content, setContent] = useState('');
     const inputRef = useRef();
 
@@ -36,3 +40,5 @@ export default function TodoEditor({ onCreate}) {
         </div>
     )
 }
+
+export default memo(TodoEditor);
