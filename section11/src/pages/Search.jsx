@@ -9,7 +9,7 @@ export default function Search() {
     const [searchParams, setSearchParams] = useSearchParams();
     
     const [countries, setCountries] = useState([]);
-    const q = searchParams.get("q");
+    const q = searchParams.get("q").toLowerCase();
 
     const setInitData = async() => {
         const data = await fetchSearchResults(q);

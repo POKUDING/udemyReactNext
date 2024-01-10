@@ -10,7 +10,7 @@ export default function Layout({ children }) {
 
     return <div>
             <header className={style.header} onClick={onClickHeader}>
-                <div>🌎 NARAS</div>
+                <div>POKUDING'S 🌎 NARAS</div>
             </header>
             <main className={style.main}>{children}</main>
         </div>
